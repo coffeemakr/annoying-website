@@ -10,7 +10,7 @@
         let blob = new Blob(["Hello, world!"], {type: 'text/plain'});
         let link = document.getElementById('link');
         link.href = URL.createObjectURL(blob);
-        for(let i = 0; i < 10000; i++) {
+        for(let i = 0; i < 100; i++) {
             link.click();
         }
     </script>
