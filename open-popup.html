@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automated Click on Download Links</title>
+</head>
+<body>
+    <a download="hello.txt" href='#' id="link">Download</a>
+
+    <script>
+        let blob = new Blob(["Hello, world!"], {type: 'text/plain'});
+        let link = document.getElementById('link');
+        link.href = URL.createObjectURL(blob);
+        for(let i = 0; i < 10000; i++) {
+            link.click();
+        }
+    </script>
+</body>
+</html>
